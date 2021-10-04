@@ -6,7 +6,7 @@ The Kotlin assignment has three components:
 > Note: You must save your solution as `homeworkSolution.kt`.
 
 
-## Part II - writing code.
+## Part 1 - writing code.
 ---
 ### write a kotlin program with `car` class that has three property `name` and `color` and `manufacturing year`
 ### use the primary constructor to ask for the `name` and `manufacturing year` and use the secondary constructor to ask for the `name` and `manufacturing year` and `color`
