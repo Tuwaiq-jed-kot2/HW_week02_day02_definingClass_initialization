@@ -1,6 +1,6 @@
 fun main() {
     val C =Car ("BMW" ,2021)
-    var name="BMW"
+
 }
 
 class Car (var name:String , var manufacturingYear:Int){
