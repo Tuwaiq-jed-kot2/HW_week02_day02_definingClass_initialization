@@ -1,28 +1,26 @@
 fun main(){
     val mazda=Car("mazda",2019)
-   mazda.info("jeb",2000)
 
 
-    val lexus=Car("lexus","whit",2000)
-    lexus.info("car",2001)
-     mazda.accelaration(67,34)
-   mazda.stop(false,60)
+    val lexus=Car("ma","chgh",2000)
+
+    lexus.accelaration(67,34)
+    mazda.stop(false,60)
 }
 
 
 class Car ( val name:String , val manufacturingYear:Int) {
+    var color:String=""
 
 
-    constructor(nName: String, nColor: String, nManufacturingYear: Int) : this(name = nName, manufacturingYear = nManufacturingYear) {
+    constructor(nName: String, nColor: String, nManufacturingYear: Int) : this(name = nName,manufacturingYear = nManufacturingYear) {
+        color=nColor
+
 
         print("$nName,$nColor,$nManufacturingYear")
     }
 
 
-
-    fun info(name: String, manufacturingYear: Int) {
-
-        print("$name,$manufacturingYear") }
 
 
 init {
