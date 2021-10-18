@@ -2,7 +2,7 @@ fun main(){
     val mazda=Car("mazda",2019)
 
 
-    val lexus=Car("ma","chgh",2000)
+    val lexus=Car("ma","chgh",2000)/
 
     lexus.accelaration(67,34)
     mazda.stop(false,60)
