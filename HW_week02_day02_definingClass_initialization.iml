@@ -3,7 +3,7 @@ fun main(){
    mazda.info("jeb",2000)
 
 
-    val lexus=Car("ma","chgh",2000)
+    val lexus=Car("lexus","whit",2000)
     lexus.info("car",2001)
      mazda.accelaration(67,34)
    mazda.stop(false,60)
