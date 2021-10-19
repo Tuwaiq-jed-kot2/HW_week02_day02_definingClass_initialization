@@ -31,8 +31,8 @@ class Car(val name: String, val manufacturingYear: Int) {
     }
 
     fun useBreake(breakk:Boolean){
-    val breakk=true
-        if (breakk==true){
+
+        if (breakk){
             println("move")
         }else{
             println("stop")
