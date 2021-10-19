@@ -3,6 +3,7 @@ fun main() {
     car1.printInfo()
     val car2 = Car("camre", 2021, "BLACK")
     car2.printInfo()
+    car1.accelerate(100 , 20)
 
 }
 
@@ -21,8 +22,9 @@ class Car(val name: String, val manufacturingYear: Int) {
         println("Welcome $name")
     }
 
-    fun accelerate() {
+    fun accelerate(distance:Int , time:Int) {
 
+        println(distance/time)
     }
 
     fun useBreake() {
