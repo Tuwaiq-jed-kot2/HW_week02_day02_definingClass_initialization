@@ -2,39 +2,35 @@ fun main() {
     val firstCar = Car("BMW", "red", 2021)
     val secondCar = Car("Xcent", "White")
 
-    firstCar.carModule()
-    secondCar.carModule()
+    firstCar.carInfo()
+    secondCar.carInfo()
     firstCar.accelerate()
     secondCar.useBreake()
 }
 
 class Car(var name: String?, var color: String?) {
-    //var manufacturingYear:Int? = null
+    var manufacturingYears:Int
 
-    constructor(sName: String?, sColor: String?, manufacturingYear: Int?) : this(name = sName, color = sColor) {
-        //manufacturingYear = 111
+    constructor(sName: String?, sColor: String?, manufacturingYear: Int) : this(name = sName, color = sColor) {
+        manufacturingYears = manufacturingYear
     }
 
     init {
+        manufacturingYears = 0
         println("welcome $name")
     }
 
-//    fun carInfo() {
-//        if (!::manufacturingYear.isInitialized)
-//        {
-//            println("The car name is: ${this.name} the module is: ${this.color}")
-//        } else {
-//            println("The car name is: ${this.name} the module is: ${this.color} and the module is:${this.manufacturingYear}year")
-//
-//        }
-//    }
-
-    fun carModule() {
+    fun carInfo() {
         try {
-            println("The car name is: ${this.name} the module is: ${this.color} ")
-        } catch (e : NumberFormatException) {
-            println("e:NumberFormatException")
-        }
+            if (manufacturingYears == 0)
+            {
+                println("The car name is: ${this.name}  a model is: ${this.color}")
+            } else {
+                println("The car name is: ${this.name} the module is: ${this.color} and  a model is: ${this.manufacturingYears}year")
+
+            }
+        }catch (e : NumberFormatException) {
+            println("e:NumberFormatException")}
     }
 
     fun accelerate() {
