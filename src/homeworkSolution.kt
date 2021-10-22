@@ -1,36 +1,39 @@
 fun main(){
-    val person= car("M","red",1976)
+    var person= car("M",1988)
+    var person1 =car("assd",1477,"red")
+
     person.printInfo()
-    person.accelerate("speed")
-    person.break()
+
+    person.accelerate()
+    person.breaking()
+
 }
-class car(val name:String,val color:String,val manufacturingYear:Int ) {
+class car(private var name:String,private var manufacturingYear:Int ) {
+
+    constructor( Aname: String, AmanufacturingYear: Int, color:String ):this
+        (name=Aname,manufacturingYear=AmanufacturingYear ){var color= color}
 
 
     init {
         println("wellcom")
     }
 
-    val speed = mutableListOf<String>()
-    var carS =0
+
 
     fun printInfo() {
-        println("hello your car name $name and the color $color amd the manufacturingYear $manufacturingYear ")
-
-    }
-    fun break(car:String){
-
+        println("hello your car name $name  amd the manufacturingYear $manufacturingYear ")
     }
 
 
 
-    fun accelerate(car: String) {
-        if (speed.contains(name)) {
-            println("need to slow")
-        } else (speed.add(name))
-        carS++
-        println("your speed fine")
+    fun accelerate() {
+
+        println("need to accelerate")
     }
+    fun breaking() {
+        println("need to break")
+
+    }
+
 }
-}
-}
+
