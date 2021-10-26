@@ -2,27 +2,36 @@
 
 fun main() {
 
-val ferrari = Car("ferrari" , "back" , 2021 )
+    val ferrari = Car("ferrari" , 2021 , "black" )
 
-
+    val hyundai = Car("hyundai" , 2021  )
 }
 
-class Car(val name : String , val color: String , val manufacturing: Int){
-   constructor (name:String,manufacturing: Int, color: String ):this (name:String,manufacturing:Int){
+class Car(val name : String, val manufacturing: Int) {
+
+    lateinit var cColor: String
+
+    constructor (nName: String, mManufacturing: Int, color: String) : this(
+        name = nName,
+        manufacturing = mManufacturing
+    ) {
+        cColor = color
+    }
+
+    init {
+        println("welcome $name")
+    }
+
+
+    fun accelerate() {
+        println("you used accelerate ")
 
     }
 
-init {
-   println("welcome $name")
+    fun usebreake() {
+        println("you used breaks")
+    }
 }
 
-
-fun accelerate(){
-println( )
-
-}
-fun use breake (){
-    println( )
-}
 
 
